@@ -1,8 +1,8 @@
 module.exports = {
   prompts: {
-    type: {
+    templateType: {
       type: 'checkbox',
-      label: 'type',
+      label: 'templateType',
       message:
         'Please select libaries which you will use in this material source.',
       required: true,
@@ -48,9 +48,9 @@ module.exports = {
     }
   },
   filters: {
-    'react/**/*': 'type.react',
-    'vue/**/*': 'type.vue',
-    'angular/**/*': 'type.angular'
+    'react/**/*': 'templateType.react',
+    'vue/**/*': 'templateType.vue',
+    'angular/**/*': 'templateType.angular'
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}'
 }
