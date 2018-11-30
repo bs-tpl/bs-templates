@@ -75,9 +75,7 @@ module.exports = {
   filters: {
     'react/**/*': 'type.react',
     'vue/**/*': 'type.vue',
-    'angular/**/*': 'type.angular',
-    'react/bs-umi-dva-antd-mobile-template/**/*': 'template.bs-umi-dva-antd-mobile-template',
-    'react/bs-umi-dva-antd-pc-template/**/*': 'template.bs-umi-dva-antd-pc-template',
+    'angular/**/*': 'type.angular'
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}'
 }
