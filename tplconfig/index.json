@@ -1,0 +1,33 @@
+{
+  "tpl":{
+    "bs-react-templates":{
+      "type":"react",
+      "templates":{
+        "bs-umi-dva-antd-pc-template":{
+          "img":"https://raw.githubusercontent.com/bs-config/bs-tplconfig/master/assets/bs-react-templates/bs-umi-dva-antd-pc-template.png",
+          "modules":{
+  
+          }
+        },
+        "bs-umi-dva-antd-mobile-template":{
+          "img":"https://raw.githubusercontent.com/bs-config/bs-tplconfig/master/assets/bs-react-templates/bs-umi-dva-antd-mobile-template.png",
+          "modules":{
+            
+          }
+        }
+      }
+    },
+    "bs-vue-templates":{
+      "type":"vue",
+      "templates":{
+
+      }
+    },
+    "bs-angular-templates":{
+      "type":"angular",
+      "templates":{
+        
+      }
+    }
+  }
+}
