@@ -25,31 +25,6 @@ module.exports = {
         },
       ],
     },
-    template: {
-      type: 'checkbox',
-      label: 'template',
-      message:
-        'Please select libaries which you will use in this material source.',
-      required: true,
-      validate: (answer) => {
-        if (answer.length < 1) {
-          return 'It must be at least one';
-        }
-        return true;
-      },
-      choices: [
-        {
-          name: 'bs-umi-dva-antd-mobile-template',
-          value: 'bs-umi-dva-antd-mobile-template',
-          short: 'bs-umi-dva-antd-mobile-template',
-        },
-        {
-          name: 'bs-umi-dva-antd-pc-template',
-          value: 'bs-umi-dva-antd-pc-template',
-          short: 'bs-umi-dva-antd-pc-template',
-        },
-      ],
-    },
     name: {
       type: 'string',
       required: true,
