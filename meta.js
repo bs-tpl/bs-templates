@@ -8,7 +8,7 @@ module.exports = {
     templates:{
       type: 'list',
       message: 'Project template',
-      when:templateType==='react',
+      when:'templateType==="react"',
       choices: ['bs-umi-dva-antd-mobile-template','bs-umi-dva-antd-pc-template']
     },
     type:{
