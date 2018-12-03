@@ -1,29 +1,27 @@
 module.exports = {
   prompts: {
     templateType: {
-      type: 'checkbox',
-      label: 'templateType',
-      message:
-        'Please select libaries which you will use in this material source.',
-      required: true,
-      validate: (answer) => {
-        if (answer.length < 1) {
-          return 'It must be at least one';
-        }
-        return true;
-      },
-      choices: [
-        {
-          name: 'React (https://github.com/facebook/react)',
-          value: 'react',
-          short: 'React',
-        },
-        {
-          name: 'Vue (https://github.com/vuejs/vue)',
-          value: 'vue',
-          short: 'Vue',
-        },
-      ],
+      type: list,
+      message: 'Project templateType',
+      choices: ['vue','react','angular']
+    },
+    templates:{
+      type: list,
+      message: 'Project template',
+      choices: function(){
+        console.log(1)
+        console.log(templateType)
+      }
+    },
+    type:{
+      type: list,
+      message: 'Please select project type',
+      choices: ['模板(scaffolds)','模块(modules)']
+    },
+    mudules:{
+      when:templateType==='react'&& type==='mudules',
+      message: 'Please project modules',
+      choices: ['aa','bb','cc']
     },
     name: {
       type: 'string',
@@ -48,9 +46,9 @@ module.exports = {
     }
   },
   filters: {
-    'react/**/*': 'templateType.react',
-    'vue/**/*': 'templateType.vue',
-    'angular/**/*': 'templateType.angular'
+    'react/**/*': 'templateType==="react"',
+    'vue/**/*': 'templateType==="vue"',
+    'angular/**/*': 'templateType==="angular"',
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}'
 }
