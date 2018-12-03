@@ -1,26 +1,5 @@
 module.exports = {
   prompts: {
-    templateType: {
-      type: list,
-      message: 'Project templateType',
-      choices: ['vue','react','angular']
-    },
-    templates:{
-      type: list,
-      message: 'Project template',
-      choices: ['bs-umi-dva-antd-mobile-template','bs-umi-dva-antd-pc-template']
-    },
-    type:{
-      type: list,
-      message: 'Please select project type',
-      choices: ['模板(scaffolds)','模块(modules)']
-    },
-    mudules:{
-      type: list,
-      when:templateType==='react'&& type==='mudules',
-      message: 'Please project modules',
-      choices: ['aa','bb','cc']
-    },
     name: {
       type: 'string',
       required: true,
@@ -44,9 +23,7 @@ module.exports = {
     }
   },
   filters: {
-    'react/**/*': 'templateType==="react"',
-    'vue/**/*': 'templateType==="vue"',
-    'angular/**/*': 'templateType==="angular"',
+
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}'
 }
