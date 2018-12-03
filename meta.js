@@ -8,10 +8,7 @@ module.exports = {
     templates:{
       type: list,
       message: 'Project template',
-      choices: function(){
-        console.log(1)
-        console.log(templateType)
-      }
+      choices: ['bs-umi-dva-antd-mobile-template','bs-umi-dva-antd-pc-template']
     },
     type:{
       type: list,
@@ -19,6 +16,7 @@ module.exports = {
       choices: ['模板(scaffolds)','模块(modules)']
     },
     mudules:{
+      type: list,
       when:templateType==='react'&& type==='mudules',
       message: 'Please project modules',
       choices: ['aa','bb','cc']
