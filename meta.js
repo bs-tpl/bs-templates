@@ -1,29 +1,12 @@
 module.exports = {
   prompts: {
     type: {
-      type: 'checkbox',
+      type: 'list',
       label: 'type',
       message:
         'Please select libaries which you will use in this material source.',
       required: true,
-      validate: (answer) => {
-        if (answer.length < 1) {
-          return 'It must be at least one';
-        }
-        return true;
-      },
-      choices: [
-        {
-          name: 'React (https://github.com/facebook/react)',
-          value: 'react',
-          short: 'React',
-        },
-        {
-          name: 'Vue (https://github.com/vuejs/vue)',
-          value: 'vue',
-          short: 'Vue',
-        },
-      ],
+      choices: ['vue','react','angular']
     },
     name: {
       type: 'string',
