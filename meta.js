@@ -8,13 +8,8 @@ module.exports = {
     templates:{
       type: 'list',
       message: 'Project template',
-      choices: function(){
-        console.log(1)
-        console.log(templateType)
-        if(templateType==='react'){
-          return ['bs-umi-dva-antd-mobile-template','bs-umi-dva-antd-pc-template']
-        }
-      }
+      when:templateType==='react',
+      choices: ['bs-umi-dva-antd-mobile-template','bs-umi-dva-antd-pc-template']
     },
     type:{
       type: 'list',
