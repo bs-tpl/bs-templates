@@ -11,8 +11,8 @@ module.exports = {
       when:'templateType==="react"',
       choices: function(){
         console.log(1)
-        console.log(templateType)
-        if(templateType==='react'){
+        console.log('templateType')
+        if('templateType'==='react'){
           return ['bs-umi-dva-antd-mobile-template','bs-umi-dva-antd-pc-template']
         }
       }
