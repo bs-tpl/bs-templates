@@ -16,12 +16,6 @@ module.exports = {
       message: 'Please select project type',
       choices: ['模板(scaffolds)','模块(modules)']
     },
-    mudules:{
-      type: 'list',
-      when:templateType==='react'&& type==='mudules',
-      message: 'Please project modules',
-      choices: ['aa','bb','cc']
-    },
     name: {
       type: 'string',
       required: true,
