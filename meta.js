@@ -1,14 +1,29 @@
 module.exports = {
   prompts: {
-    type:{
-      type: list,
-      message: 'Please select project type',
-      choices: ['模板(scaffolds)','模块(modules)']
-    },
-    mudules:{
-      type: list,
-      message: 'Please project modules',
-      choices: ['aa','bb','cc']
+    type: {
+      type: 'checkbox',
+      label: 'type',
+      message:
+        'Please select libaries which you will use in this material source.',
+      required: true,
+      validate: (answer) => {
+        if (answer.length < 1) {
+          return 'It must be at least one';
+        }
+        return true;
+      },
+      choices: [
+        {
+          name: 'React (https://github.com/facebook/react)',
+          value: 'react',
+          short: 'React',
+        },
+        {
+          name: 'Vue (https://github.com/vuejs/vue)',
+          value: 'vue',
+          short: 'Vue',
+        },
+      ],
     },
     name: {
       type: 'string',
@@ -33,9 +48,7 @@ module.exports = {
     }
   },
   filters: {
-    'react/**/*': 'templateType==="react"',
-    'vue/**/*': 'templateType==="vue"',
-    'angular/**/*': 'templateType==="angular"',
+
   },
   completeMessage: '{{#inPlace}}To get started:\n\n  npm install\n  npm run dev{{else}}To get started:\n\n  cd {{destDirName}}\n  npm install\n  npm run dev{{/inPlace}}'
 }
